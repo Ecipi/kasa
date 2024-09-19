@@ -1,3 +1,5 @@
+@use "../../Global" as *;
+
 footer {
     display: flex;
     flex-direction: column;
@@ -5,8 +7,9 @@ footer {
     font-size: 24px;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    color: white;
+    background-color: $bg-footer-color;
+    color: $text-color__white;
+    font-weight: 500;
     width: 1440px;
     height: 210px;
 }

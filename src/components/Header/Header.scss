@@ -1,3 +1,5 @@
+@use "../../Global" as *;
+
 header {
     display: flex;
     justify-content: space-between;
@@ -9,8 +11,9 @@ li {
 
 a {
     text-decoration: none;
-    color: black;
+    color: $text-color__black;
     font-size: 24px ;
+    font-weight: 500;
 
     &:hover {
         text-decoration: underline;

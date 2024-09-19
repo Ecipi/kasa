@@ -1,0 +1,25 @@
+@use "../../Global" as *;
+
+
+
+.dropdown-title {
+    display: inline-flex;
+    font-size: 24px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $primary-color;
+    color: $text-color__white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    width: 1000px;
+    margin-bottom: 15px;
+}
+
+.dropdown-content ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}

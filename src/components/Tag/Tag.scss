@@ -1,0 +1,18 @@
+@use "../../Global" as *;
+
+.tags-container {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  color: $text-color__white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 3px 40px 3px 40px;
+  border-radius: 10px;
+}

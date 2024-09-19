@@ -10,16 +10,19 @@ body {
   background-color: #FFFFFF;
 }
 
-footer {
+.tags-container {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  font-size: 24px;
-  align-items: center;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-flex;
   justify-content: center;
-  background-color: #000000;
+  align-items: center;
+  background-color: #FF6060;
   color: #FFFFFF;
+  font-size: 14px;
   font-weight: 500;
-  width: 1440px;
-  height: 210px;
-}/*# sourceMappingURL=Footer.css.map */
+  padding: 3px 40px 3px 40px;
+  border-radius: 10px;
+}/*# sourceMappingURL=Tag.css.map */
