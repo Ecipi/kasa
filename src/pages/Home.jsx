@@ -13,7 +13,7 @@ function Home() {
     document.title = "Accueil | Kasa";
   }, []);
 
-  const logement = Logements[0];
+  const logement = Logements[1];
 
   return (
     <>

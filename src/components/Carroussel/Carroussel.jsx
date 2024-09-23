@@ -8,15 +8,17 @@ function Carroussel({ content }) {
 
   const pictures = content.pictures;
 
-  const goToPrevious = () => {
-    const isFirstImage = currentImg === 0;
-    const newImg = isFirstImage ? pictures.length - 1 : currentImg - 1;
+  const alt = content.title;
+
+  const previous = () => {
+    const firstImg = currentImg === 0;
+    const newImg = firstImg ? pictures.length - 1 : currentImg - 1;
     setcurrentImg(newImg);
   };
 
-  const goToNext = () => {
-    const isLastImage = currentImg === pictures.length - 1;
-    const newImg = isLastImage ? 0 : currentImg + 1;
+  const next = () => {
+    const lastImg = currentImg === pictures.length - 1;
+    const newImg = lastImg ? 0 : currentImg + 1;
     setcurrentImg(newImg);
   };
 
@@ -25,15 +27,15 @@ function Carroussel({ content }) {
   return (
     <div className='carroussel'>
       {showArrows && (
-        <button className='carroussel__left-arrow' onClick={goToPrevious}>
+        <button className='carroussel__left-arrow' onClick={previous}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
       )}
 
-      <img src={pictures[currentImg]} alt={`image-${currentImg}`} />
+      <img src={pictures[currentImg]} alt={alt} />
 
       {showArrows && (
-        <button className='carroussel__right-arrow' onClick={goToNext}>
+        <button className='carroussel__right-arrow' onClick={next}>
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
       )}

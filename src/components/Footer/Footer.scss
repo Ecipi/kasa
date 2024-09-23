@@ -12,5 +12,11 @@ footer {
     font-weight: 500;
     width: 1440px;
     height: 210px;
+
+    @media (max-width: 767.98px) {
+        width: 375px;
+        height: 210px;
+        font-size: 12px;
+      }
 }
 

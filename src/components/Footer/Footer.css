@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: "Montserrat", sans-serif;
   background-color: #FFFFFF;
 }
@@ -22,4 +22,11 @@ footer {
   font-weight: 500;
   width: 1440px;
   height: 210px;
+}
+@media (max-width: 767.98px) {
+  footer {
+    width: 375px;
+    height: 210px;
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=Footer.css.map */

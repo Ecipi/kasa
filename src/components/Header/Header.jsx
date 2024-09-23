@@ -1,7 +1,15 @@
+import { useEffect, useState } from 'react';
 import logo from '../../assets/img/logo.svg';
 import './Header.css';
 
 function Header() {
+  const [activePage, setActivePage] = useState('');
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    setActivePage(path);
+  }, []);
+
   return (
     <header>
       <div>
@@ -9,14 +17,24 @@ function Header() {
       </div>
       <div>
         <nav>
-            <ul>
-                <li>
-                <a href="../pages/Home">Accueil</a>
-                </li>
-                <li>
-                <a href="../pages/Apropos">A propos</a>
-                </li>
-            </ul>
+          <ul>
+            <li>
+              <a
+                href="/Home"
+                className={activePage === '/Home' ? 'active' : ''}
+              >
+                Accueil
+              </a>
+            </li>
+            <li>
+              <a
+                href="/Apropos"
+                className={activePage === '/Apropos' ? 'active' : ''}
+              >
+                A Propos
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
