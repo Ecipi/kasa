@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
-  margin: 0;
+  margin: 0px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -8,12 +8,13 @@
 html, body {
   font-family: "Montserrat", sans-serif;
   background-color: #FFFFFF;
+  margin: 50px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  width: 1440px;
+  width: 1240px;
 }
 header img {
   width: 210px;
