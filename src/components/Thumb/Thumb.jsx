@@ -1,16 +1,11 @@
 import './Thumb.css';
-import Logements from '../../Back-end/logements.json';
 
-function Thumb({ id }) {
-  const logement = Logements[0];
-
-  if (!logement) {
-    return <div className='thumb'>Logement non trouvé</div>;
-  }
+function Thumb({ content }) {
 
   return (
     <div className='thumb'>
-      <img src={logement.cover} alt={logement.title} />
+      <img src={content.cover} alt={content.title} />
+      <h2>{content.title}</h2>
     </div>
   );
 }

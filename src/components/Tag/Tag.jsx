@@ -1,17 +1,10 @@
 import './Tag.css';
-import Logements from '../../Back-end/logements.json';
 
-function Tag ({ id }) {
-    const logement = Logements[0];
-  
-    if (!logement) {
-      return <div className='tag'>Logement non trouvé</div>;
-    }
-  
+function Tag ({ content }) { 
     return (
         <div className='tags-container'>
-          {logement.tags.map((tag, i) => (
-            <div key={logement.id} className='tag'>
+          {content.map((tag, i) => (
+            <div key={i} className='tag'>
               <p>{tag}</p>
             </div>
           ))}

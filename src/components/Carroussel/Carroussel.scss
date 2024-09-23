@@ -1,0 +1,33 @@
+.carroussel {
+    position: relative;
+    width: 1240px;
+    height: 415px;
+    border-radius: 25px;
+
+    &__left-arrow, &__right-arrow {
+        font-size: 64px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    &__left-arrow {
+        left: 10px;
+    }
+
+    &__right-arrow {
+        right: 10px;
+    }
+}
+
+.carroussel img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 25px;
+}
