@@ -7,7 +7,7 @@ import hero from '../../assets/img/hero_apropos.jpg';
 function Apropos() {
 
   useEffect(() => {
-    document.title = "A propos | Kasa";
+    document.title = "À propos | Kasa";
   },);
 
 

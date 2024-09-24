@@ -6,7 +6,7 @@ function Header() {
   return (
     <header>
       <div>
-        <img src={logo} alt="Logo de Kasa" />
+      <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}><img src={logo} alt="Logo de Kasa" /></NavLink>
       </div>
       <div>
         <nav>
@@ -18,7 +18,7 @@ function Header() {
             </li>
             <li>
               <NavLink to="/Apropos" className={({ isActive }) => (isActive ? "active" : "")}>
-                A Propos
+                À Propos
               </NavLink>
             </li>
           </ul>
