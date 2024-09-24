@@ -1,0 +1,37 @@
+@use "../../Global" as *;
+
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 140px;
+    margin-bottom: 140px;
+    min-height: calc(100vh - 45vh);
+
+    &__text {
+        margin-bottom: 140px;
+        color: $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & h1 {
+            margin-bottom: 140px;
+            font-size: 288px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 36px;
+            font-weight: 500;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 500;
+        border-bottom: 2px solid;
+    }
+}

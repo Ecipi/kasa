@@ -1,0 +1,15 @@
+@use "../../Global" as *;
+
+.rating {
+    display: flex;
+    gap: 4px;
+    font-size: 24px;
+
+    &__filled {
+        color: $primary-color;
+    }
+
+    &__empty {
+        color: $text-color__grey;
+    }
+}

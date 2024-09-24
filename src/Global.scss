@@ -4,16 +4,17 @@
 $primary-color: #FF6060;
 $text-color__white: #FFFFFF;
 $text-color__black: #000000;
+$text-color__grey: #E3E3E3;
 $bg-footer-color: #000000;
 $bg-gray: #F6F6F6;
 
-* {
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-html, body {
+body {
     font-family: 'Montserrat', sans-serif;
     background-color: #FFFFFF ;
 }

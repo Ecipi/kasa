@@ -35,18 +35,9 @@
 }
 
 .dropdown-container {
-  width: 1000px;
   background-color: $bg-gray;
   border-radius: 5px;
-
-  @media (max-width: 1024px) {
-    width: 582px;
-  }
-
-  @media (max-width: 767.98px) {
-    width: 335px;
-    font-size: 12px;
-  }
+  cursor: pointer;
 }
 
 .dropdown-title {
@@ -60,8 +51,6 @@
     font-weight: 700;
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 5px;
-    cursor: pointer;
 
     @media (max-width: 767.98px) {
       font-size: 13px;
@@ -72,17 +61,18 @@
     overflow: hidden;
 
     &__true {
-      animation: fadeIn-down 0.1s ease-in forwards;
+      animation: fadeIn-down 0.1s ease-in-out forwards;
+      padding: 10px 20px;
 
-      & p {
+      & ul {
           display: flex;
           flex-direction: column;
           align-items: start;
-          margin-bottom: 5px;
+          gap: 5px;
       }
     }
 
     &__false {
-        animation: fadeIn-up 0.1s ease-in forwards;
+        animation: fadeIn-up 0.1s ease-in-out forwards;
     }
 }

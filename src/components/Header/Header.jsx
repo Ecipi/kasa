@@ -1,15 +1,8 @@
-import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/img/logo.svg';
-import './Header.css';
+import './Header.scss';
 
 function Header() {
-  const [activePage, setActivePage] = useState('');
-
-  useEffect(() => {
-    const path = window.location.pathname;
-    setActivePage(path);
-  }, []);
-
   return (
     <header>
       <div>
@@ -17,22 +10,16 @@ function Header() {
       </div>
       <div>
         <nav>
-          <ul>
+          <ul className='ul'>
             <li>
-              <a
-                href="/Home"
-                className={activePage === '/Home' ? 'active' : ''}
-              >
+              <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
                 Accueil
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/Apropos"
-                className={activePage === '/Apropos' ? 'active' : ''}
-              >
+              <NavLink to="/Apropos" className={({ isActive }) => (isActive ? "active" : "")}>
                 A Propos
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>

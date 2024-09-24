@@ -1,0 +1,88 @@
+@use "../../Global" as *;
+
+.logement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 28vh);
+
+    &__hero {
+        width: 1240px;
+        height: 415px;
+        border-radius: 25px;
+        display: flex;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        width: 1240px;
+        margin-top: 30px;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            & h1 {
+                color: $primary-color;
+                font-size: 36px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+
+            & p {
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+        
+        &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+            &__host {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                
+                & p {
+                    text-align: end;
+                    color: $primary-color;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-right: 10px;
+                    width: 80px;
+                }
+
+                & img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    &__dropdowns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 1240px;
+        margin-top: 25px;
+        margin-bottom: 50px;
+        gap: 75px;
+
+        &__description {
+            width: 100%;
+        }
+
+        &__equipments {
+            width: 100%;
+        }
+    }
+}
+
+.tags-container {
+    margin-top: 20px;
+}
