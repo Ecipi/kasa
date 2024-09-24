@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
-import './Dropdown.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import './Dropdown.scss';
 
 function Dropdown({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,22 +10,26 @@ function Dropdown({ title, content }) {
     setIsOpen(!isOpen);
   };
 
-  const contentClass = isOpen
-    ? 'display__true'
-    : 'display__false';
+  const contentClass = isOpen ? 'display__true' : 'display__false';
 
   return (
-    <div className="dropdown-container">
-      <div className="dropdown-title" onClick={toggleList}>
+    <div className="dropdown-container" onClick={toggleList}>
+      <div className="dropdown-title" >
         <p>{title}</p>
         <p>
-          <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+          <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
         </p>
       </div>
       <div className={contentClass}>
-        {content.map((item, i) => (
-          <p key={i}>{item}</p>
-        ))}
+        {Array.isArray(content) ? (
+          <ul>
+            {content.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>{content}</p>
+        )}
       </div>
     </div>
   );
