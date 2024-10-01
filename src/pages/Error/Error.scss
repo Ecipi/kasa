@@ -7,7 +7,6 @@
     flex-direction: column;
     margin-top: 140px;
     margin-bottom: 140px;
-    min-height: calc(100vh - 45vh);
 
     &__text {
         margin-bottom: 140px;
@@ -21,11 +20,20 @@
             margin-bottom: 140px;
             font-size: 288px;
             font-weight: 700;
+
+            @media (max-width: 768px) {
+                font-size: 96px;
+            }
         }
 
         p {
             font-size: 36px;
             font-weight: 500;
+
+            @media (max-width: 768px) {
+                font-size: 18px;
+                text-align: center;
+            }
         }
     }
 
@@ -33,5 +41,19 @@
         font-size: 18px;
         font-weight: 500;
         border-bottom: 2px solid;
+
+        & a {
+            text-decoration: none;
+            color: $text-color__black;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }

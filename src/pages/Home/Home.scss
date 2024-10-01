@@ -3,22 +3,31 @@
 .main {
     display: flex;
     flex-direction: column;
-    margin: 50px 100px;
     align-items: center;
+
   
     &__hero {
       display: flex;
       flex-direction: column;
-      width: 1240px;
+      width: 100%;
       height: 220px;
       position: relative;
       margin-bottom: 50px;
   
       & img {
-        width: 1240px;
         height: 220px;
         object-fit: cover;
         border-radius: 25px;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        width: 335px;
+        height: 111px;
       }
   
       &::before {
@@ -31,6 +40,11 @@
         background-color: rgba(0, 0, 0, 0.6);
         z-index: 1;
         border-radius: 25px;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          height: 100%;
+        }
       }
   
       & h2 {
@@ -43,7 +57,23 @@
         font-weight: 700;
         white-space: nowrap;
         z-index: 2;
+
+        @media (max-width: 768px) {
+          font-size: 24px;
+          white-space: normal;
+          left: 30%;
+          transform: translate(-30%, -50%);
+
+        }
       }
+
+      @media (max-width: 768px) {
+        margin-bottom: 25px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      margin: 25px;
     }
   }
   
@@ -54,12 +84,24 @@
     background-color: $bg-gray;
     border-radius: 25px;
     margin-bottom: 50px;
-    width: 1240px;
+    width: 100%;
   
     &__container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 60px;
       margin: 50px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 25px;
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      background-color: $bg-white;
+      width: 100%;
     }
   }

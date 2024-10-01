@@ -3,10 +3,12 @@
 .tags-container {
   display: flex;
   gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .tag {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: $primary-color;
@@ -15,4 +17,11 @@
   font-weight: 500;
   padding: 3px 40px 3px 40px;
   border-radius: 10px;
+  width: 115px;
+
+  @media (max-width: 767.98px) {
+    font-size: 10px;
+    padding: 2px 30px 3px 30px;
+    width: 84px;
+  }
 }

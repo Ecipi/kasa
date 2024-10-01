@@ -19,35 +19,37 @@ function Logement() {
 
   return (
     <>
+    <div className='container'>
       <div className='logement'>
-        <div className='logement__hero'>
-          <Carroussel content={logement}/>
-        </div>
-        <div className='logement__container'>
-          <div className='logement__container__left'>
-            <h1>{logement.title}</h1>
-            <p>{logement.location}</p>
-            <Tag content={logement.tags}/>
+          <div className='logement__hero'>
+            <Carroussel content={logement}/>
           </div>
-          <div className='logement__container__right'>
-            <div className='logement__container__right__host'>
-              <p>{logement.host.name}</p>
-              <img src={logement.host.picture} alt='' />
+          <div className='logement__container'>
+            <div className='logement__container__left'>
+              <h1>{logement.title}</h1>
+              <p className='logement__container__left__p'>{logement.location}</p>
+              <Tag content={logement.tags}/>
             </div>
-            <div>
-              <Rating content={logement.rating}/>
+            <div className='logement__container__right'>
+              <div className='logement__container__right__host'>
+                <p>{logement.host.name}</p>
+                <img src={logement.host.picture} alt='' />
+              </div>
+              <div>
+                <Rating content={logement.rating}/>
+              </div>
             </div>
           </div>
-        </div>
-        <div className='logement__dropdowns'>
-          <div className='logement__dropdowns__description'>
-            <Dropdown title='Description' content={logement.description}/>
-          </div>
-            <div className='logement__dropdowns__equipments'>
-              <Dropdown title='Équipements' content={logement.equipments}/>
+          <div className='logement__dropdowns'>
+            <div className='logement__dropdowns__description'>
+              <Dropdown title='Description' content={logement.description}/>
             </div>
+              <div className='logement__dropdowns__equipments'>
+                <Dropdown title='Équipements' content={logement.equipments}/>
+              </div>
+          </div>
         </div>
-      </div>
+    </div>
     </>
   );
 }

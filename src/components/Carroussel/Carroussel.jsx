@@ -25,21 +25,23 @@ function Carroussel({ content }) {
   const showArrows = pictures.length > 1;
 
   return (
-    <div className='carroussel'>
-      {showArrows && (
-        <button className='carroussel__left-arrow' onClick={previous}>
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
-      )}
+    <>
+      <div className='carroussel'>
+        {showArrows && (
+          <button className='carroussel__left-arrow' onClick={previous}>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+        )}
 
-      <img src={pictures[currentImg]} alt={alt} />
+        <img src={pictures[currentImg]} alt={alt} />
 
-      {showArrows && (
-        <button className='carroussel__right-arrow' onClick={next}>
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
-      )}
-    </div>
+        {showArrows && (
+          <button className='carroussel__right-arrow' onClick={next}>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        )}
+      </div>
+    </>
   );
 }
 

@@ -7,6 +7,7 @@ $text-color__black: #000000;
 $text-color__grey: #E3E3E3;
 $bg-footer-color: #000000;
 $bg-gray: #F6F6F6;
+$bg-white: #FFFFFF;
 
 *{
     margin: 0px;
@@ -16,5 +17,11 @@ $bg-gray: #F6F6F6;
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #FFFFFF ;
+    background-color: $bg-white ;
+}
+
+.container {
+    width: calc(100vw - 24px);
+    max-width: 1240px;
+    margin: 0 auto;
 }
