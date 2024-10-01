@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import heroIMG from '../../assets/img/hero.jpg';
 import Logements from '../../Back-end/logements.json'; 
 import Thumb from '../../components/Thumb/Thumb';

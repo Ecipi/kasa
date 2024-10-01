@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import './Logement.scss';
 import Logements from '../../Back-end/logements.json';
@@ -9,13 +9,19 @@ import Rating from '../../components/Rating/Rating';
 import Dropdown from '../../components/Dropdown/Dropdown';
 
 function Logement() {
-
   const { id } = useParams();
-  const logement = Logements.find((logement) => logement.id === id);  
+  const navigate = useNavigate();
+  const logement = Logements.find((logement) => logement.id === id);
 
   useEffect(() => {
-    document.title = `${logement.title} | Kasa`;
-  },);
+    if (!logement) {
+      navigate('/error', { replace: true });
+    } else {
+      document.title = `${logement.title} | Kasa`;
+    }
+  }, [logement, navigate]);
+
+  if (!logement) return null;
 
   return (
     <>
