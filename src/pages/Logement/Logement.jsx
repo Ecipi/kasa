@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect } from 'react';
 import './Logement.scss';
 import Logements from '../../Back-end/logements.json';
@@ -7,21 +7,19 @@ import Carroussel from '../../components/Carroussel/Carroussel';
 import Tag from '../../components/Tag/Tag';
 import Rating from '../../components/Rating/Rating';
 import Dropdown from '../../components/Dropdown/Dropdown';
+import Error from '../Error/Error';
 
 function Logement() {
   const { id } = useParams();
-  const navigate = useNavigate();
   const logement = Logements.find((logement) => logement.id === id);
 
   useEffect(() => {
-    if (!logement) {
-      navigate('/error', { replace: true });
-    } else {
-      document.title = `${logement.title} | Kasa`;
-    }
-  }, [logement, navigate]);
+      document.title = `Logement | Kasa`;
+  }, []);
 
-  if (!logement) return null;
+  if (!logement) {
+    return (<><Error /></>);
+  }
 
   return (
     <>
