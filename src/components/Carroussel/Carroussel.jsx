@@ -6,23 +6,20 @@ import './Carroussel.scss';
 function Carroussel({ content }) {
   const [currentImg, setcurrentImg] = useState(0);
 
-  const pictures = content.pictures;
-
-  const alt = content.title;
 
   const previous = () => {
     const firstImg = currentImg === 0;
-    const newImg = firstImg ? pictures.length - 1 : currentImg - 1;
+    const newImg = firstImg ? content.length - 1 : currentImg - 1;
     setcurrentImg(newImg);
   };
 
   const next = () => {
-    const lastImg = currentImg === pictures.length - 1;
+    const lastImg = currentImg === content.length - 1;
     const newImg = lastImg ? 0 : currentImg + 1;
     setcurrentImg(newImg);
   };
 
-  const showArrows = pictures.length > 1;
+  const showArrows = content.length > 1;
 
   return (
     <>
@@ -33,7 +30,7 @@ function Carroussel({ content }) {
           </button>
         )}
 
-        <img src={pictures[currentImg]} alt={alt} />
+        <img src={content[currentImg]} alt=''/>
 
         {showArrows && (
           <button className='carroussel__right-arrow' onClick={next}>

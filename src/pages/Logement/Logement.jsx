@@ -26,7 +26,7 @@ function Logement() {
     <div className='container'>
       <div className='logement'>
           <div className='logement__hero'>
-            <Carroussel content={logement}/>
+            <Carroussel content={logement.pictures}/>
           </div>
           <div className='logement__container'>
             <div className='logement__container__left'>
