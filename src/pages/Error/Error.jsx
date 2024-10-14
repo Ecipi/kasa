@@ -7,7 +7,7 @@ function Error() {
 
   useEffect(() => {
     document.title = "Erreur | Kasa";
-  },);
+  },[]);
 
   return (
     <>

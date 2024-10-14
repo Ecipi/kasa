@@ -8,7 +8,7 @@ function Apropos() {
 
   useEffect(() => {
     document.title = "À propos | Kasa";
-  },);
+  },[]);
 
 
 

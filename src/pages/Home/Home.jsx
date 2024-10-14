@@ -9,7 +9,7 @@ function Home() {
 
   useEffect(() => {
     document.title = "Accueil | Kasa";
-  },);
+  },[]);
 
   return (
     <>
