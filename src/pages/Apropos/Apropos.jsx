@@ -17,7 +17,7 @@ function Apropos() {
     <div className='container'>
       <div className='about'>
         <div className='about__hero'>
-            <img src={hero} alt='Montagnes enneigées sous un ciel partiellement nuageux avec une vallée verdoyante et des conifères au premier plan.'/>
+            <img src={hero} alt=''/>
         </div>
         <div className='about__container'>
           <Dropdown title='Fiabilité' content='Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.'/>
